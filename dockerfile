@@ -5,8 +5,7 @@ FROM python:slim
 # instalamos nano (editor de texto super ligero)
 RUN apt update && apt install nano
 
-
-# Creamos una carpeta dentro del sistema de linux, para almacenar nuestra aplicación
+# Creamos una carpeta dentro del sistema de linux y la usamos como ruta por defecto, para almacenar nuestra aplicación
 WORKDIR /app
 
 # Copiamos todos los archivos a esa carpeta

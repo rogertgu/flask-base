@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- Links -->
+    <!-- Links - revisar que estén actualizados -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -16,19 +16,18 @@
         <div class="hero-body">
         <h1 class="title">App-title</h1>
         <h2 class="subtitle">App-subtitle</h2>
-    {% block header %}{% endblock %}
-</div>
+		{% block header %}{% endblock %}
+		</div>
     </header>
     <!-- MAIN -->
     <main class="container is-fluid">
-    
-    {% block main %}{% endblock %}
+		{% block main %}{% endblock %}
     </main>
     <!-- FOOTER -->
     <footer class="footer">
-            <div class="content has-text-centered">
-        <p>Copyleft - Rogert J. Guevara U. - 2020</p>
-    {% block footer %}{% endblock %}
+        <div class="content has-text-centered">
+			<p>Copyleft - Rogert J. Guevara U. - 2021</p>
+			{% block footer %}{% endblock %}
         </div>
     </footer>
 </body>

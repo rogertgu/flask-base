@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- Links - revisar que estén actualizados -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <title>{% block title %}{{ app_title }}{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+    <!-- Links - Estilos guardados en la carpeta static/css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-<body>
+<body class="{{ page_class }}">
     <!-- HEADER -->
     <header class="header hero is-info">
         <div class="hero-body">
-        <h1 class="title">App-title</h1>
-        <h2 class="subtitle">App-subtitle</h2>
-		{% block header %}{% endblock %}
-		</div>
+        <h1 class="title">{{ app_title }}</h1>
+        <h2 class="subtitle">{{ app_subtitle }}</h2>
+        {% block header %}{% endblock %}
+        </div>
     </header>
     <!-- MAIN -->
     <main class="container is-fluid">
-		{% block main %}{% endblock %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="container">
+                    {% for message in messages %}
+                        <div class="notification is-{{ message[0] }}">
+                            <button class="delete"></button>
+                            {{ message[1] }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% block main %}{% endblock %}
     </main>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="content has-text-centered">
-			<p>Copyleft - Rogert J. Guevara U. - 2021</p>
-			{% block footer %}{% endblock %}
+            <p>Copyleft - Rogert Guevara Uzcátegui - 2023</p>
+            {% block footer %}{% endblock %}
         </div>
     </footer>
+    <script defer src="{{ url_for('static', filename='js/all.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
 </body>
 </html>

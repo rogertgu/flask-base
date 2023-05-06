@@ -21,7 +21,7 @@ Este repositorio contiene una plantilla para iniciar rápidamente un proyecto we
 1. Clona este repositorio en tu máquina local:
     
     ```bash
-    git clone
+    git clone https://github.com/rogertgu/flask-base
     ```
 
 2. Accede al directorio del proyecto:

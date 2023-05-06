@@ -1,18 +1,21 @@
-version: "3"
+version: "3.8"
 
-services: 
-    app:
-        build: .
-        volumes:
-            - .:/app
-        ports: 
-            - "5000:5000"
-        env_file:
-            - .env
-            
-        #networks:
-        #    - proxy-manager-net
-      
-#networks:
-#  proxy-manager-net:
-#    external: true   
+services:
+  app:
+    container_name: ${APP_NAME}
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+
+    # Uncomment the following lines if you want to use the proxy-manager-net network
+    # networks:
+    #   - proxy-manager-net
+
+# Uncomment the following lines if you want to use the proxy-manager-net network
+# networks:
+#   proxy-manager-net:
+#     external: true

@@ -30,11 +30,8 @@ Este repositorio contiene una plantilla para iniciar rápidamente un proyecto we
     cd plantilla-proyecto-web-python-docker
     ```
 
-3. Crea un archivo .env a partir del archivo .env.example:
+3. Edita el archivo .env según tus necesidades (app name, author etc.)
 
-    ```bash
-    cp .env.example .env
-    ```
 
 4. Construye la imagen de Docker:
 
@@ -60,7 +57,7 @@ Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo [LICENS
 
 ## personalización
 
-- Cambiar el nombre del proyecto en el archivo .env
+- Cambiar el nombre del proyecto y el autor en el archivo .env
 - Cambiar el nombre del proyecto en el archivo docker-compose.yml
 - Edita el archivo main.py y agrega tus propias rutas y controladores según las necesidades de tu aplicación.
 - Actualiza los archivos de plantilla en la carpeta templates con el contenido y diseño de tu aplicación.

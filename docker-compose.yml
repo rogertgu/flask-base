@@ -7,3 +7,12 @@ services:
             - .:/app
         ports: 
             - "5000:5000"
+        env_file:
+            - .env
+            
+        #networks:
+        #    - proxy-manager-net
+      
+#networks:
+#  proxy-manager-net:
+#    external: true   

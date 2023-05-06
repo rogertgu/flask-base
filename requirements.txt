@@ -1,5 +1,4 @@
-flask
-pylint
-pep8
+Flask
 gunicorn
-
+pycodestyle
+pylint

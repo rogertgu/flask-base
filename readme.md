@@ -14,7 +14,7 @@ Este repositorio contiene una plantilla para iniciar rápidamente un proyecto we
 
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- [Python](https://www.python.org/downloads/) (opcional, si deseas ejecutar el proyecto fuera de Docker)
+- [Python](https://www.python.org/downloads/) (opcional, solo si deseas ejecutar el proyecto fuera de Docker)
 
 ## Uso
 

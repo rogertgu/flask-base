@@ -4,7 +4,7 @@ from flask import Flask, flash, redirect, render_template, request
 
 # Obtener el valor de cada variable de entorno
 app_author = os.getenv("APP_AUTHOR", "Autor predeterminado")
-app_name = os.getenv("APP_NAME", "Nombre de la aplicación predeterminado")
+app_title = os.getenv("APP_NAME", "Nombre de la aplicación predeterminado")
 
 app = Flask(__name__)
 app.config.update(
@@ -15,7 +15,7 @@ app.config.update(
 # rutas
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html", app_author=app_author, app_name=app_name)
+    return render_template("index.html", app_author=app_author, app_title=app_title)
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))

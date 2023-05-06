@@ -27,11 +27,13 @@ Este repositorio contiene una plantilla para iniciar rápidamente un proyecto we
 2. Accede al directorio del proyecto:
 
     ```bash
-    cd plantilla-proyecto-web-python-docker
+    cd flask-base
     ```
 
 3. Edita el archivo .env según tus necesidades (app name, author etc.)
-
+    ```bash
+    nano .env
+    ```
 
 4. Construye la imagen de Docker:
 

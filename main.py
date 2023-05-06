@@ -1,10 +1,13 @@
 import os
 
+from dotenv import load_dotenv
 from flask import Flask, flash, redirect, render_template, request
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config.update(
-    SECRET_KEY=os.environ.get("SECRET_KEY", "mysecretkey"),
+    SECRET_KEY=os.environ.get("SECRET_KEY", "contraseñasuperfuerte"),
     # Otros ajustes de configuración si los necesitas
 )
 

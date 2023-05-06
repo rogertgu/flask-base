@@ -1,2 +1,27 @@
-env/
+# Archivos y directorios de Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Entorno virtual de Python
+venv/
+
+# Archivos de configuración y secretos
+config.py
+*.env
+*.secrets
+
+# Archivos temporales y de caché
+*.log
+*.tmp
+.cache/
+.tmp/
+
+# Archivos y directorios de IDEs y editores de texto
 .vscode/
+.idea/
+*.swp
+*.swo
+*.swn
